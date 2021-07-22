@@ -1,5 +1,5 @@
 # Vemo
-A calculator used to find the ATR and standard/ normal distribution of a financial instrument and display the findings through visualizations.
+A calculator used to find the ATR and Standard / Normal distributions of a financial instrument and display the findings through visualizations.
 
 ## General Info
 A React app that calculates imported CSV Open, Low, High and Close data to find the ATR and Standard / Normal distributions of a financial instrument and display the findings through React Chart visualizations.
