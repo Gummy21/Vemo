@@ -2,7 +2,7 @@
 A calculator used to find the ATR and Standard / Normal distributions of a financial instrument and display the findings through visualizations.
 
 ## General Info
-A React app that calculates imported CSV Open, Low, High and Close data to find the ATR and Standard / Normal distributions of a financial instrument and display the findings through React Chart visualizations.
+A React app that calculates imported CSV Open, Low, High and Close data to find the ATR, Normal distribution and STDs from the mean of a financial instrument and display the findings through React Chart visualizations.
 
 
 ## Technologies
