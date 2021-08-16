@@ -1,3 +1,20 @@
-h1 {
-    color:purple
+html,body {
+    margin:0;
+    padding:0;
+}
+main {
+    
+    article{
+        display: flex;
+        flex-direction:column;
+        
+        nav {
+            background-color:#161616;
+            padding:2%;
+        }
+        #histogram {
+            height: 100%;
+            width:100%;
+        }
+    }
 }
