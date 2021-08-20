@@ -12,17 +12,11 @@ interface ReturnsProp {
 const Atr: React.FC<ReturnsProp> = ({ATR}) => {
   
   const data = {
-    labels: [
-      Object.keys(ATR)[0],
-      Object.keys(ATR)[1],
-      Object.keys(ATR)[2],
-      Object.keys(ATR)[3],
-      Object.keys(ATR)[4]
-    ],
+    labels:ATR.labels,
     datasets: [
       {
-        label: 'Average True Range',
-        data: ATR,
+        label: 'Average True Range %',
+        data: ATR.values,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)'],
         borderColor: [
@@ -35,13 +29,22 @@ const Atr: React.FC<ReturnsProp> = ({ATR}) => {
   const options = {
     responsive:true,
     scales: {
-      yAxes: [
-        {
+      y: {
           ticks: {
             beginAtZero: true,
+            font: {
+              size: 12
+            }
           },
         },
-      ],
+      x: {
+        ticks: {
+           beginAtZero: true,
+           font: {
+             size: 10
+           }
+         },
+      },
     },
   };
 

@@ -14,7 +14,7 @@ interface ReturnsProp {
 
 const Chart: React.FC<ReturnsProp> = ({returns}) => {
   const data = {
-    labels: ['Less than 2%', '1.5% to 1%', '1% to 0.5%', '0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 2%'],
+    labels: ['Less than 2%', '-1.5% to -1%', '-1% to -0.5%', '-0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 2%'],
     datasets: [
       {
         label: 'Distribution of Returns',
@@ -42,13 +42,21 @@ const Chart: React.FC<ReturnsProp> = ({returns}) => {
   
   const options = {
     scales: {
-      yAxes: [
-        {
+      x: {
+        ticks: {
+          font: {
+            size: 9
+          }
+        },
+      },
+      y: {
           ticks: {
             beginAtZero: true,
+            font: {
+              size: 12
+            }
           },
         },
-      ],
     },
   };
 
