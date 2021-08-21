@@ -63,9 +63,45 @@ main {
     background-color:white;
     display:flex;
     flex-direction: column;
-    margin:40% 2% 10% 2%;
-    padding:5% 4% 5% 4%;
+    margin:20% 2% 10% 2%;
+    padding:2% 4% 5% 4%;
     border-radius:10px;
+
+    #close {
+      margin:0 0 0 0.1%;
+      width:10%;
+    }
+    h1 {
+      margin-bottom:0;
+      font-size:1.5em
+    }
+  
+    .buttons {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      margin:6% 0;
+      input {
+        margin:auto  
+      }
+      select {
+        margin:auto;
+      }
+    }
+    #import {
+      margin-top:2%;
+      display: flex;
+      justify-content:center;
+      button {
+        width:25%;
+        padding:2%;
+        border:0;
+        font-size:1em;
+      }
+    }
+
+
+
   }
 }
 

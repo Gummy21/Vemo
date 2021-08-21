@@ -23,8 +23,8 @@ const config: webpack.Configuration = {
     rules: [
      
       { test: /\.tsx?$/,  use: ["ts-loader"]  },
-      { test:/\.scss$/,  use: ["style-loader","css-loader", "sass-loader"]  }
-     
+      { test:/\.scss$/,  use: ["style-loader","css-loader", "sass-loader"]  },
+      { test: /\.png?$/,  type:"asset/resource"  }
     ]
   },
   plugins: [htmlPlugin]
