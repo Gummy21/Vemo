@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   font-family: "Sora", sans-serif;
   color: #161616;
+  background-color:rgb(146, 143, 143);
 }
 main {
   nav {
@@ -28,10 +29,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 2%;
+   
+    #stds {
+      margin:2%;
+      padding:2%;
+      background-color:#e7e6e6;
+    }
     #histogram {
-      height: 100%;
+      height: 40vh;
+      margin-bottom:2%;
       width: 100%;
+      padding-top:2%;
+      background-color:#e7e6e6;
+
+      div {
+        height:100%;
+        width:100vw;
+      }
     }
     #lineChart {
       height: 100%;
@@ -136,15 +150,22 @@ main {
       flex-direction: column;
       justify-content: center;
       padding: 0 2%;
-      width: 90%;
-
-      #histogram {
-        height: 50%;
-        width: 50%;
+      width: 90%;   
+      height:100%;
+      .returns {
+        display:flex;
+        flex-direction: row;
+        width:100%;
+        #histogram {
+          height: 50%;
+          width: 60%;
+        }
+        #stds {
+          
+          width: 40%;
+        }
       }
-      #stds {
-        width: 50%;
-      }
+      
       #lineChart {
         height: 40%;
         width: 100%;

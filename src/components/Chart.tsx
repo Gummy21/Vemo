@@ -1,7 +1,8 @@
 import React, { useEffect , useState } from "react";
 import { Bar } from 'react-chartjs-2';
-
-
+import { Chart } from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+Chart.register(ChartDataLabels)
 
 
 interface ReturnsProp {
@@ -12,7 +13,8 @@ interface ReturnsProp {
  
 
 
-const Chart: React.FC<ReturnsProp> = ({returns}) => {
+const Histogram: React.FC<ReturnsProp> = ({returns}) => {
+  
   const data = {
     labels: ['Less than 2%', '-1.5% to -1%', '-1% to -0.5%', '-0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 2%'],
     datasets: [
@@ -36,25 +38,48 @@ const Chart: React.FC<ReturnsProp> = ({returns}) => {
           'rgba(255, 159, 64, 1)',
         ],
         borderWidth: 1,
+        datalabels: {
+          align:'end',
+          anchor:'end'
+        }
       },
     ],
   };
   
   const options = {
+    maintainAspectRatio:false,
+    responsive:true,
+    layout: {
+      padding:0
+    },
+    plugins: {
+      legend: {
+        labels: {
+          boxWidth:0,
+          colors:'#161616',
+          font:{
+            size:16,
+            weight:600
+          } 
+        },
+        position:'bottom'
+      }
+    },
     scales: {
       x: {
         ticks: {
+          maxRotation:75,
+          minRotation:75,
+          padding:5,
           font: {
-            size: 9
+            size: 12
           }
         },
       },
       y: {
           ticks: {
             beginAtZero: true,
-            font: {
-              size: 12
-            }
+            display:false
           },
         },
     },
@@ -68,4 +93,4 @@ const Chart: React.FC<ReturnsProp> = ({returns}) => {
   );
 }
 
-export default Chart
+export default Histogram

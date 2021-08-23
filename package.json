@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "chart.js": "^3.5.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
     "css-loader": "^6.0.0",
     "path": "^0.12.7",
     "react": "^17.0.2",

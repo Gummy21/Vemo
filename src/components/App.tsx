@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.scss"
-import Chart from "./Chart";
+import Histogram from "./Chart";
 import Atr from "./Atr";
 import Std from "./Std";
 import FormImg from '../assets/form_img.png'
@@ -30,7 +30,7 @@ const App: React.FC = () => {
       .then(res => {
         getATR(<Atr ATR={res.ATR} />)
         getSTD(<Std stds={res.histogram.Percents} />)
-        getChart(<Chart returns={res.histogram.Returns} />)
+        getChart(<Histogram returns={res.histogram.Returns} />)
       })
   }, []);
 
@@ -74,7 +74,7 @@ const App: React.FC = () => {
         //Send data to components
         getATR(<Atr ATR={res.ATR} />)
         getSTD(<Std stds={res.histogram.Percents} />)
-        getChart(<Chart returns={res.histogram.Returns} />)
+        getChart(<Histogram returns={res.histogram.Returns} />)
       })
     }
 
@@ -88,16 +88,16 @@ const App: React.FC = () => {
         <button onClick={() => setPopUp(!popUp)}>Import</button>
 
       </nav>
-      <p>{err}</p>
+      
       <form className={popUp ? "popUp" : "pop"}>
         <div className="menu">
           <p id="close" onClick={() => setPopUp(!popUp)}>X</p>
 
           <h1>Import</h1>
-
+          <p>{err}</p>
           <p id="instructions">
             Hello
-        </p>
+          </p>
 
           <img src={FormImg} id="fileImg" />
           <div className="buttons">
@@ -123,17 +123,23 @@ const App: React.FC = () => {
       </form>
 
       <article className="comps">
+        <span className="returns">
+        <div id="histogram">
+            {chartComp}
+          </div>
+          <div id="stds">
+            {stdComp}
+          </div>
+
+          
+        </span>
+        
+
         <div id="lineChart">
           {atrComp}
         </div>
 
-        <div id="stds">
-          {stdComp}
-        </div>
-
-        <div id="histogram">
-          {chartComp}
-        </div>
+        
 
       </article>
 
