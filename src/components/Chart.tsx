@@ -1,41 +1,46 @@
 import React, { useEffect , useState } from "react";
-import { Bar } from 'react-chartjs-2';
+import { Bar,defaults } from 'react-chartjs-2';
 import { Chart } from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(ChartDataLabels)
-
+defaults.font.family = "'Sora'";
 
 interface ReturnsProp {
-  returns: any
+  returns: any,
+  TimeFrame:string
   
 }
 
  
 
 
-const Histogram: React.FC<ReturnsProp> = ({returns}) => {
+const Histogram: React.FC<ReturnsProp> = ({returns,TimeFrame}) => {
   
   const data = {
-    labels: ['Less than 2%', '-1.5% to -1%', '-1% to -0.5%', '-0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 2%'],
+    labels: ['Less than 1.5%', '-1.5% to -1%', '-1% to -0.5%', '-0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 1.5%'],
     datasets: [
       {
-        label: 'Distribution of Returns',
+        label: TimeFrame + ' Returns Range',
         data: returns,
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
+          '#f9c74f',
+          '#90be6d',
+          '#43aa8b',
+          '#577590',
+          '#4d908e',
+          '#43aa8b',
+          '#90be6d',
+          '#f9c74f',
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
+          '#f9c74f',
+          '#90be6d',
+          '#43aa8b',
+          '#577590',
+          '#4d908e',
+          '#43aa8b',
+          '#90be6d',
+          '#f9c74f',
         ],
         borderWidth: 1,
         datalabels: {
@@ -53,30 +58,50 @@ const Histogram: React.FC<ReturnsProp> = ({returns}) => {
       padding:0
     },
     plugins: {
-      legend: {
-        labels: {
-          boxWidth:0,
-          colors:'#161616',
-          font:{
-            size:16,
-            weight:600
-          } 
+      title: {
+        display:true,
+        text:TimeFrame + " Returns Range",
+        color:'#011627',
+        padding:10,
+        font:{
+          family: 'Sora',
+          size:18,
+          weight:600
+        }
+      },
+      datalabels: {
+        backgroundColor: function(context) {
+          return context.dataset.backgroundColor;
         },
-        position:'bottom'
+        borderRadius:4,
+        color:'white',
+        font: {
+          weight:'bold'
+        },
+        padding:4
+      },
+      legend: {
+        display:false
       }
     },
     scales: {
       x: {
+        grid: {
+          display:false,
+
+        },
         ticks: {
-          maxRotation:75,
-          minRotation:75,
+          maxRotation:70,
+          minRotation:70,
+          color:"#011627",
           padding:5,
           font: {
-            size: 12
+            size: 14
           }
         },
       },
       y: {
+        grid: {},
           ticks: {
             beginAtZero: true,
             display:false
@@ -86,9 +111,9 @@ const Histogram: React.FC<ReturnsProp> = ({returns}) => {
   };
 
   return(
-    <div>       
+    <React.Fragment>       
       <Bar data={data} options={options} />
-      </div>
+    </React.Fragment>
     
   );
 }
