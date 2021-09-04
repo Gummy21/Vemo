@@ -1,8 +1,8 @@
 # Vemo
-A calculator used to find the ATR, Standard Deviations from the mean and the Normal distribution and display the findings through Chartjs visualizations
+A calculator used to find the ATR, Standard Deviations from the mean and the Distribution and display the findings through Chartjs visualizations
 
 ## General Info
-A React app that calculates imported CSV Open, Low, High and Close data to find the ATR, Normal distribution and STDs from the mean of a financial instrument and display the findings through React Chart visualizations.
+A React app that calculates imported CSV Open, Low, High and Close data to find the ATR, The Distribution and STDs from the mean of a financial instrument and display the findings through React Chart visualizations.
 
 
 ## Technologies
