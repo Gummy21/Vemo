@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "webpack serve --config webpack.config.ts"
+    "start": "node app.js",
+    "prebuild": "rimraf dist",
+    "build": "webpack build --config webpack.config.ts",
+    "dev": "webpack serve --config webpack.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +15,14 @@
     "chart.js": "^3.5.0",
     "chartjs-plugin-datalabels": "^2.0.0",
     "css-loader": "^6.0.0",
+    "dotenv": "^10.0.0",
+    "dotenv-webpack": "^7.0.3",
+    "express": "^4.17.1",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.1.0",

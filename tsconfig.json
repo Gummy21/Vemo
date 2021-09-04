@@ -4,7 +4,7 @@
     },
     "compilerOptions": {
     "esModuleInterop": true,
-    "outDir": "./dist/",
+    "outDir": "./dist/Vemo",
     "sourceMap": true,
     "noImplicitAny": false,
     "module": "commonjs",

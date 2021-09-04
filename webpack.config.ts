@@ -1,5 +1,6 @@
 import path from "path";
 import webpack from "webpack";
+import Dotenv from "dotenv-webpack"
 import HtmlWebPackPlugin from "html-webpack-plugin";
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -11,8 +12,9 @@ const config: webpack.Configuration = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname,  "/dist"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname,  "dist/Vemo"),
+    publicPath: '/',
+    filename: "[name].js"
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
@@ -22,12 +24,17 @@ const config: webpack.Configuration = {
   module: {
     rules: [
      
-      { test: /\.tsx?$/,  use: ["ts-loader"]  },
-      { test:/\.scss$/,  use: ["style-loader","css-loader", "sass-loader"]  },
-      { test: /\.png?$/,  type:"asset/resource"  }
+      { test: /\.tsx?$/,include: path.resolve(__dirname, 'src'),  use: ["ts-loader"]  },
+      { test:/\.scss$/, include: path.resolve(__dirname, 'src/components'), use: ["style-loader","css-loader", "sass-loader"]  },
+      { test: /\.png?$/,  include: path.resolve(__dirname, 'src/assets'),  type:"asset/resource"  }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin,new Dotenv()],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
 
 export default config;
