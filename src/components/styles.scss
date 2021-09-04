@@ -101,15 +101,14 @@ main {
       padding-bottom:4%;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
-      p,h1 {
-        padding-left: 2%;
+      p {
+        margin:6% 1%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding:6% 4%;
+        text-align:center;
       }
       .mean {
         height:50vh;
-      }
-
-      h1 {
-        font-size:1.2em;
       }
     }
 
@@ -167,7 +166,7 @@ main {
       #close {
         margin: 0 0 0 0.1%;
         width: 5%;
-        background-color:#f9f9f9;
+        background-color:#ddd9d9;
         border-radius: 10px;
         cursor: pointer;
         font-size: 14px;
@@ -261,9 +260,6 @@ main {
           }
           canvas{
             padding:0 !important;
-          }
-          * {
-            padding: 2%;
           }
         }
       }
@@ -363,24 +359,28 @@ main {
         #stds {
 
           width: 99%;
-          height:50vh;
-          margin-top: 1%;
+          height:92vh;
+          margin-top: 2%;
           grid-column-start: 2;
           grid-column-end: 2;
           grid-row-start: 1;
           grid-row-end: 2;
           padding:0 ;
-
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+          p {
+            margin:2% 1%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding:3% 4%;
+            text-align:center;
+          }
           .mean {
             padding:0;
             canvas {
               padding:0;
             }
-          }
-          p{
-            margin: 0;
-            background-color:$secondary-color;
-            padding: 4.5% 0;
           }
         }
       }
@@ -403,17 +403,17 @@ main {
     }
 
     .menu {
-      margin:2% 4.5% 0% 4.5%;
+      margin:2% auto;
       padding:2% 4% 4% 4%;
       border-radius:10px;
-
+      width:50%;
       span{
         display: flex;
         align-items: center;
         margin-bottom: 1%;
         #close {
-          width: 2%;
-          background-color:#f9f9f9;
+          width: 4%;
+          border-radius: 20px;
           font-size: 16px;
           font-weight: bold;
           padding:1%;
@@ -431,7 +431,7 @@ main {
       }
   
       small {
-        font-size:14px;
+        font-size:12px;
         text-align:center;
         margin:0.2% 0;
       }
@@ -462,7 +462,7 @@ main {
         button {
           margin-right: 5%;
           margin-left: 2%;
-          padding: 1%;
+          padding: 1.5%;
           color: white;
           border: 0;
           background-color: $button-color;

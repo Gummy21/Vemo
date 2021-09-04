@@ -17,11 +17,11 @@ interface ReturnsProp {
 const Histogram: React.FC<ReturnsProp> = ({returns,TimeFrame}) => {
   
   const data = {
-    labels: ['Less than 1.5%', '-1.5% to -1%', '-1% to -0.5%', '-0.5% to 0%', '0% to 0.5%', '0.5% to 1%', '1% to 1.5%', 'More than 1.5%'],
+    labels: returns["labels"],
     datasets: [
       {
         label: TimeFrame + ' Returns Range',
-        data: returns,
+        data: returns["returns"],
         backgroundColor: [
           '#f9c74f',
           '#90be6d',
@@ -62,12 +62,12 @@ const Histogram: React.FC<ReturnsProp> = ({returns,TimeFrame}) => {
         display:true,
         text:TimeFrame + " Returns Range",
         color:'#011627',
-        padding:10,
+        padding:15,
         font:{
           family: 'Sora',
           size:18,
           weight:600
-        }
+        },
       },
       datalabels: {
         backgroundColor: function(context) {
@@ -78,7 +78,8 @@ const Histogram: React.FC<ReturnsProp> = ({returns,TimeFrame}) => {
         font: {
           weight:'bold'
         },
-        padding:4
+        padding:4,
+       
       },
       legend: {
         display:false

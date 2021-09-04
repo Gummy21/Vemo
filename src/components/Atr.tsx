@@ -16,7 +16,7 @@ const Atr: React.FC<ReturnsProp> = ({ATR,TimeFrame}) => {
     labels:ATR.labels,
     datasets: [
       {
-        label: 'Average ' + TimeFrame + ' ATR %',
+        label: 'Average ' + TimeFrame + ' ATR',
         data: ATR.values,
         backgroundColor: [
           '#003049'],
@@ -46,7 +46,10 @@ const Atr: React.FC<ReturnsProp> = ({ATR,TimeFrame}) => {
           family: 'Sora',
           weight:'bold'  
         },
-        padding:6
+        padding:6,
+        formatter: function(value, context) {
+          return value + '%';
+        }
       },
       legend: {
         labels: {
