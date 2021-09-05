@@ -4,11 +4,11 @@ app = express();
 
 
 
-app.use(express.static(__dirname + '/dist/Vemo'))
+app.use(express.static(__dirname + '/dist/Volme'))
 
 
 app.get("/*", function(req,res){
-    res.sendFile(path.join(__dirname + '/dist/Vemo/index.html'))
+    res.sendFile(path.join(__dirname + '/dist/Volme/index.html'))
 });
 
 console.log("Server has started")
