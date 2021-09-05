@@ -18,3 +18,11 @@ A React app that calculates imported CSV Open, Low, High and Close data to find 
 * Typescript: 4.3.5
 * chart.js: 3.5.0
 * react-chartjs-2: 3.0.4
+
+
+## Setup 
+To run this project, install it locally using npm:
+```
+$ cd ../Judo
+$ npm install
+$ npm run dev
