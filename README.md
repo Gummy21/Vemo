@@ -4,6 +4,8 @@ A calculator used to find the ATR, Standard Deviations from the mean and the Dis
 ## General Info
 A React app that calculates imported CSV Open, Low, High and Close data to find the ATR, The Distribution and STDs from the mean of a financial instrument and display the findings through React Chart visualizations.
 
+
+
 ![banner](./banner.PNG)
 
 
