@@ -1,4 +1,4 @@
-# Vemo
+# Volme
 A calculator used to find the ATR, Standard Deviations from the mean and the Distribution and display the findings through Chartjs visualizations
 
 ## General Info

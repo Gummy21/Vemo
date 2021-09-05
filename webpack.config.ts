@@ -12,7 +12,7 @@ const config: webpack.Configuration = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname,  "dist/Vemo"),
+    path: path.resolve(__dirname,  "dist/Volme"),
     publicPath: '/',
     filename: "[name].js"
   },
