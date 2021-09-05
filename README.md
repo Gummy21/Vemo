@@ -23,6 +23,6 @@ A React app that calculates imported CSV Open, Low, High and Close data to find 
 ## Setup 
 To run this project, install it locally using npm:
 ```
-$ cd ../Judo
+$ cd ../Volme
 $ npm install
 $ npm run dev
