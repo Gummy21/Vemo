@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
   //Example data Get request on page load
   useEffect(() => {
-    fetch(process.env.API_URL).then(res => (res.json()))
+    fetch(" https://volme.probacks.xyz").then(res => (res.json()))
       .then(res => {
         getATR(<Atr ATR={res.ATR} TimeFrame={"Daily"}/>)
         getSTD(<Std stds={res.histogram.Percents} mean={res.histogram.MeanReturns} />)
@@ -76,7 +76,7 @@ const App: React.FC = () => {
     form.append('timeframe', timeframe)
 
     //Fetch post to api and send data to components
-    fetch(process.env.API_URL_POST, {
+    fetch("https://volme.probacks.xyz/calculate", {
       method: "POST",
 
       body: form
