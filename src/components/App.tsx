@@ -55,7 +55,7 @@ const App: React.FC = () => {
     e.preventDefault()
 
     //Close form popup menu
-    setPopUp(!popUp)
+    
 
     //Add loading animation?
 
@@ -68,7 +68,7 @@ const App: React.FC = () => {
       return 
     }
     else {
-
+      
     
 
     let form = new FormData()
@@ -82,10 +82,18 @@ const App: React.FC = () => {
       body: form
     }).then(res => (res.json()))
       .then(res => {
-        //Send data to components
-        getATR(<Atr ATR={res.ATR} TimeFrame={timeframe}/>)
-        getSTD(<Std stds={res.histogram.Percents} mean={res.histogram.MeanReturns}/>)
-        getChart(<Histogram returns={res.histogram.Returns} TimeFrame={timeframe} />)
+        if(res.Error){
+          getErr(res.Error)
+          return
+        }
+        else {
+          setPopUp(!popUp)
+          //Send data to components
+          getATR(<Atr ATR={res.ATR} TimeFrame={timeframe}/>)
+          getSTD(<Std stds={res.histogram.Percents} mean={res.histogram.MeanReturns}/>)
+          getChart(<Histogram returns={res.histogram.Returns} TimeFrame={timeframe} />)
+        }
+       
       })
     }
 
@@ -94,7 +102,11 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <nav>
-        <button onClick={() => setPopUp(!popUp)}>Import</button>
+        <button 
+          onClick={() =>{ 
+          setPopUp(!popUp)
+          getErr(undefined) 
+        }}>Import</button>
       </nav>
 
       <header> 
@@ -121,7 +133,7 @@ const App: React.FC = () => {
             <h1>Import</h1>
           </span>
   
-          <small id="err">{err}</small>
+          <small className={err ? "err":'none'}>{err}</small>
 
           <img src={FormImg} id="fileImg" />
           <small id="instructions">
@@ -149,8 +161,9 @@ const App: React.FC = () => {
 
 
       </form>
-
+      
       <article className="comps">
+        
         <div className={mobileHisto ? 'mobileTrue' : 'mobileFalse'} id="returns">
         <div id="histogram">
             {chartComp}
