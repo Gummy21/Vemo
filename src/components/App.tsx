@@ -37,7 +37,7 @@ const App: React.FC = () => {
 
   //Example data Get request on page load
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/").then(res => (res.json()))
+    fetch("https://volme.probacks.xyz/").then(res => (res.json()))
       .then(res => {
         getATR(<Atr ATR={res.ATR} TimeFrame={"Daily"} />)
         getSTD(<Std stds={res.histogram.Percents} mean={res.histogram.MeanReturns} />)
