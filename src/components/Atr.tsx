@@ -91,7 +91,6 @@ const Atr: React.FC<ReturnsProp> = ({ATR,TimeFrame}) => {
   return(
     <React.Fragment>
         <Line data={data} options={options} />    
-     
     </React.Fragment>
     
   );
