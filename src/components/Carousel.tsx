@@ -1,10 +1,6 @@
 import React from "react";
 import {Carousel} from 'react-responsive-carousel';
 
-import one from '../assets/one.png'
-import two from '../assets/two.png'
-import three from '../assets/three.png'
-
 
 
 const ImgCarousel: React.FC = () => {
@@ -13,17 +9,17 @@ const ImgCarousel: React.FC = () => {
         <React.Fragment>
             <Carousel showThumbs={false} autoPlay={true} interval={8000} infiniteLoop={true} showIndicators={false}>
                 <div>
-                    <img src={one}/>
+                    <img />
                     <p className="label">Download CSV data</p>     
                 </div>
 
                 <div>
-                    <img src={two}/>
+                    <img />
                     <p className="label"> Data headers should be named Date, Open, High, Low and Close.</p>      
                 </div>
 
                 <div>
-                    <img src={three}/>
+                    <img />
                     <p className="label">Import data</p>        
                 </div>
 
