@@ -1,16 +1,13 @@
 import React from "react";
 import {Carousel} from 'react-responsive-carousel';
 
-
-interface ImgsProp {
-    formImgOne: any,
-    formImgTwo: any,
-    formImgThree:any
-  
-}
+import formImgOne from '../assets/fone.png'
+import formImgTwo from '../assets/two.png'
+import formImgThree from '../assets/three.png'
 
 
-const ImgCarousel: React.FC<ImgsProp> = ({formImgOne,formImgTwo,formImgThree}) => {
+
+const ImgCarousel: React.FC = () => {
 
     return (
         <React.Fragment>

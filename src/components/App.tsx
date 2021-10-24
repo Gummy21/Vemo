@@ -154,7 +154,7 @@ const App: React.FC = () => {
           </span>
 
           <small className={err ? "err" : 'none'}>{err}</small>
-          <ImgCarousel formImgOne={formImgOne} formImgTwo={formImgTwo} formImgThree={formImgThree}/>
+          <ImgCarousel/>
           <div className="buttons">
 
             <input type="file" onChange={onFileUpload} accept=".csv"></input>
