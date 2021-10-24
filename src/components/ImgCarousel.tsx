@@ -2,9 +2,9 @@ import React from "react";
 import {Carousel} from 'react-responsive-carousel';
 
 
-import {One} from '../assets/one.png'
-import {Two} from '../assets/two.png'
-import {Three} from '../assets/three.png'
+import One from '../assets/one.png'
+import Two from '../assets/two.png'
+import Three from '../assets/three.png'
 
 const ImgCarousel: React.FC = () => {
 
