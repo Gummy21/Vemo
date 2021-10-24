@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./styles.scss"
+
+import "../styles/styles.scss"
+import '../styles/carousel.scss'
+import "../styles/carousel.min.scss";
+
 import Histogram from "./Chart";
 import Atr from "./Atr";
 import Std from "./Std";
-import FormImg from '../assets/form_img.png'
+import ImgCarousel from "./Carousel";
 
 
 const App: React.FC = () => {
@@ -147,12 +151,7 @@ const App: React.FC = () => {
           </span>
 
           <small className={err ? "err" : 'none'}>{err}</small>
-
-          <img src={FormImg} id="fileImg" />
-          <small id="instructions">
-            Data headers should be named Date, Open, High, Low and Close.
-          </small>
-
+          <ImgCarousel/>
           <div className="buttons">
 
             <input type="file" onChange={onFileUpload} accept=".csv"></input>
