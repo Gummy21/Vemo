@@ -14,8 +14,7 @@ const config: webpack.Configuration = {
   output: {
     path: path.resolve(__dirname,  "dist/Volme"),
     publicPath: '/',
-    filename: "[name].js",
-    assetModuleFilename: 'assets/[hash][ext][query]'
+    filename: "[name].js"
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
