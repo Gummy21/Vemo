@@ -9,9 +9,8 @@ import Atr from "./Atr";
 import Std from "./Std";
 import ImgCarousel from "./Carousel";
 
-import formImgOne from '../assets/one.png'
-import formImgTwo from '../assets/two.png'
-import formImgThree from '../assets/three.png'
+import one from '../assets/one.png'
+
 
 const App: React.FC = () => {
   //Form hooks
@@ -110,6 +109,7 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <nav>
+        <img src={one}/>
         <button id="import_btn"
           onClick={() => {
             setPopUp(!popUp)
