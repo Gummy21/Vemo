@@ -8,10 +8,6 @@
     "build": "webpack build --config webpack.config.ts",
     "dev": "webpack serve --config webpack.config.ts"
   },
-  "engines":{
-    "node":"17.0.1",
-    "npm":"8.1.1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
