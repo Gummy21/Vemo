@@ -27,7 +27,6 @@ const config: webpack.Configuration = {
       { test: /\.tsx?$/,include: path.resolve(__dirname, 'src'),  use: ["ts-loader"]  },
       { test:/\.scss$/, include: path.resolve(__dirname, 'src/styles'), use: ["style-loader","css-loader", "sass-loader"]  },
       { test:/\.css$/, include: path.resolve(__dirname,'src/components'), use: ["style-loader","css-loader"]  },
-      { test: /\.png$/,  include: path.resolve(__dirname, '/src/components/Carousel.tsx'),  type:"asset/resource"  },
       { test: /\.png$/,  include: path.resolve(__dirname, 'src/assets'),  type:"asset/resource"  }
     ]
   },

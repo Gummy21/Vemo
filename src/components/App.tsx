@@ -9,6 +9,9 @@ import Atr from "./Atr";
 import Std from "./Std";
 import ImgCarousel from "./Carousel";
 
+import formImgOne from '../assets/one.png'
+import formImgTwo from '../assets/two.png'
+import formImgThree from '../assets/three.png'
 
 const App: React.FC = () => {
   //Form hooks
@@ -151,7 +154,7 @@ const App: React.FC = () => {
           </span>
 
           <small className={err ? "err" : 'none'}>{err}</small>
-          <ImgCarousel/>
+          <ImgCarousel formImgOne={formImgOne} formImgTwo={formImgTwo} formImgThree={formImgThree}/>
           <div className="buttons">
 
             <input type="file" onChange={onFileUpload} accept=".csv"></input>
