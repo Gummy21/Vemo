@@ -2,8 +2,8 @@ import React from "react";
 import {Carousel} from 'react-responsive-carousel';
 
 import formImgOne from '../assets/form_img.png'
-import formImgTwo from '../assets/form_img_two.png'
-import formImgThree from '../assets/form_img_three.png'
+import formImgTwo from '../assets/form_img.png'
+import formImgThree from '../assets/form_img.png'
 
 
 
