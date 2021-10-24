@@ -7,7 +7,7 @@ import "../styles/carousel.min.scss";
 import Histogram from "./Chart";
 import Atr from "./Atr";
 import Std from "./Std";
-import ImgCarousel from "./Carousel";
+import ImgCarousel from "./ImgCarousel";
 
 
 
