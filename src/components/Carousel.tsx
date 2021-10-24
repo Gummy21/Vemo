@@ -1,9 +1,9 @@
 import React from "react";
 import {Carousel} from 'react-responsive-carousel';
 
-import formImgOne from '../assets/fone.png'
-import formImgTwo from '../assets/two.png'
-import formImgThree from '../assets/three.png'
+import formImgOne from './assets/one.png'
+import formImgTwo from './assets/two.png'
+import formImgThree from './assets/three.png'
 
 
 
