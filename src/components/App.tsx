@@ -9,7 +9,6 @@ import Atr from "./Atr";
 import Std from "./Std";
 import ImgCarousel from "./Carousel";
 
-import one from '../assets/one.png'
 
 
 const App: React.FC = () => {
@@ -109,7 +108,7 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <nav>
-        <img src={one}/>
+        
         <button id="import_btn"
           onClick={() => {
             setPopUp(!popUp)
