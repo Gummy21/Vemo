@@ -18,7 +18,7 @@ const config: webpack.Configuration = {
   },
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".ts", ".tsx", ".js", ".json",".scss",".png"]
+    extensions: [".ts", ".tsx", ".js", ".json",".scss"]
   },
 
   module: {
@@ -26,8 +26,9 @@ const config: webpack.Configuration = {
      
       { test: /\.tsx?$/,include: path.resolve(__dirname, 'src'),  use: ["ts-loader"]  },
       { test:/\.scss$/, include: path.resolve(__dirname, 'src/styles'), use: ["style-loader","css-loader", "sass-loader"]  },
+      { test: /\.png$/,  include: path.resolve(__dirname, 'src/assets'), type:"asset/resource"  },
       { test:/\.css$/, include: path.resolve(__dirname,'src/components'), use: ["style-loader","css-loader"]  },
-      { test: /\.png$/,  include: path.resolve(__dirname, 'src/assets'), use: ["file-loader"], type:"asset/resource"  }
+      
     ]
   },
   plugins: [htmlPlugin,new Dotenv()],

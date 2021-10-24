@@ -12,14 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime": "^7.15.4",
     "chart.js": "^3.5.0",
     "chartjs-plugin-datalabels": "^2.0.0",
     "css-loader": "^6.0.0",
     "dotenv": "^10.0.0",
     "dotenv-webpack": "^7.0.3",
     "express": "^4.17.1",
-    "file-loader": "^6.2.0",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.4",
@@ -41,6 +39,6 @@
     "typescript": "^4.3.5",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^3.11.2"
   }
 }
